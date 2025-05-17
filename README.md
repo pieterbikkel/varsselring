@@ -2,6 +2,8 @@
 
 This is a Nuxt-based web application for the Varsselring project. It uses Vue 3, TypeScript, and Vuetify for UI components.
 
+![Varsselring Application Screenshot](/applicatie.png)
+
 ## Features
 - Nuxt 3 application structure
 - Vuetify integration for Material Design UI

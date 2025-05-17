@@ -27,4 +27,4 @@ logs
 .netlify
 
 # tar
-*.tgz
+*.tar
