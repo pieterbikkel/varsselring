@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: varsselring-nuxt:latest
+    environment:
+      - NODE_ENV=production
+      - NITRO_HOST=0.0.0.0
+    networks:
+      - traefik
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.varsselring.entrypoints: "websecure"
+      traefik.http.routers.varsselring.rule: "Host(`varsselring.bytewave.nl`)"
+      traefik.http.routers.varsselring.tls: "true"
+      traefik.http.routers.varsselring.tls.certresolver: "lets-encrypt"
+      traefik.docker.network: "traefik"
+    expose:
+      - "3000"
+
+networks:
+  traefik:
+    external: true
