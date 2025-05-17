@@ -55,12 +55,17 @@ npm run start
 ### Docker
 To build and run the app with Docker:
 ```bash
-docker build -t varsselring-nuxt .
-docker run -p 3000:3000 varsselring-nuxt
+docker buildx build --platform linux/amd64 -t varsselring-nuxt:latest .
+docker save -o varsselring-nuxt-latest.tar varsselring-nuxt:latest
 ```
 Or use `docker-compose`:
 ```bash
 docker-compose up --build
+```
+
+Load image on server
+```bash
+docker load -i varsselring-nuxt-latest.tar
 ```
 
 ## Static Data
