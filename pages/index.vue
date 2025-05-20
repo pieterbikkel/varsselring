@@ -78,24 +78,12 @@ v-for="(
                 </div>
             </div>
         </div>
-        <br>
-        <p>Gemaakt door </p>
-        <a href="https://bytewave.nl" target="_blank" style="color: #1e40af; font-weight: 600; text-decoration: none;">
-            Bytewave
-        </a>
     </div>
 </template>
 
 <script setup lang="ts">
-import { useHead } from '#imports';
-import { computed, onMounted, ref } from "vue";
 
-useHead({
-    title: 'Zoek een rijder | Varsselring',
-    link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
-    ]
-});
+import { computed, onMounted, ref } from "vue";
 
 const search = ref({ firstName: "", lastName: "", number: "", class: "" });
 const searched = ref(false);

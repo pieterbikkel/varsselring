@@ -14,7 +14,14 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '#imports';
 // Geen extra script nodig
+useHead({
+    title: 'Zoek een rijder | Varsselring',
+    link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+    ]
+});
 </script>
 
 <style scoped>
